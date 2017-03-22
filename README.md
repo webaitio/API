@@ -81,6 +81,17 @@ We can offer whitelabeled iOS and Android applications which can be branded as n
 
 #### Examples
 
+Default embed with two users, width 100%. Fixed ratio 1:1. Menu and branding visible: 
+![Default](https://raw.githubusercontent.com/webaitio/API/master/screenshots/branded__two_publishers_default.png "Default embed")
+
+Embed with two users, width 100%. Fixed ratio 1:1. Only background color visible: 
+![Colored bg](https://raw.githubusercontent.com/webaitio/API/master/screenshots/branded__two_publishers__background_color_set.png "Background color only")
+
+Embed with two users, width 100%. Fixed ratio 1:1. Fully unbranded: 
+![Whitelabel](https://raw.githubusercontent.com/webaitio/API/master/screenshots/whitelabel__two_publishers__fixed_ratio.png "Whitelabel")
+
+Embed with one user only, width 100%. Wide ratio. Fully unbranded: 
+![Whitelabel wide](https://raw.githubusercontent.com/webaitio/API/master/screenshots/whitelabel__one_publisher__wide.png "Whitelabel wide")
 
 ## System requirements
 
