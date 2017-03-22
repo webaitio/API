@@ -1,20 +1,15 @@
 # VoolerGROUP API reference
-This API reference is under construction, last update February 5th, 2017.
+Last update March 22nd, 2017.
 
 This reference explains how to use the voolerGROUP API in your own applications and identifies the different types of events.
 
 
-## What is voolerGROUP?
-**VoolerGROUP** is cloudbased, mobileready WebRTC solution for different use cases. VoolerGROUP is based on **rooms** and **roles**. VoolerGROUP takes care about configuration models, keys, tokens, sessions and other variables behind the scenes. VoolerGROUP is built on top of TokBox WebRTC SDK. 
+## voolerGROUP
+**VoolerGROUP** is cloudbased, mobileready WebRTC solution for different use cases. VoolerGROUP is based on **rooms** and **roles**. VoolerGROUP takes care about configuration models, keys, tokens, sessions and other variables behind the scenes.
 
-To build your own client application based on voolerGROUP, you can choose from two different ways:
-- [**API Reference for iframe embeds**](#building-your-client-based-on-iframe-embeds) (not suitable for iOS)
-- [**API Reference for JSON**](#building-json-based-client) (advanced way)
+To build your own client application based on voolerGROUP, you can simply embed room in your website. Embedding is not suitable for iOS.
 
-In some cases, you can also combine both APIs to build powerful client applications.
-
-
-
+In more advance needs, we offer also more powerful REST API, please ask.
 
 ## Definitions
 
@@ -47,14 +42,14 @@ Every *room* has own, unique name which is managed by ***organization***. Naming
 We also offer solution where you don't need to define organization as it is already defined other ways, for example in subdomain or similar. You can build your application based `organization.vooler.tv/roomname` as a base scheme for example.
 
 
-## Building your client based on iframe Embeds
+## Using iframe embeds
 
 Easiest (and quickest) way to use voolerGROUP is the iframe API which lets you embed voolerGROUP on your website. This guide explains how to use the iframe API. 
 
 Simpliest usage of inline frame is something like following one:
 
 ```html
-<iframe id="voolerGROUP" type="text/html" width="640" height="640" src="http://webaitio.tv/etusivu/ORGANIZATION-ROOMNAME" frameborder="0"></iframe>
+<iframe id="voolerGROUP" width="640" height="640" src="https://baseurl.tld/ORGANIZATION-ROOMNAME" frameborder="0"></iframe>
 ```
 
 Above example will embed *room* called **ORGANIZATION-ROOMNAME** to your application or webpage with *role* **VIEWER**. Height and width are both 640px and there are no borders.
@@ -64,7 +59,7 @@ If you need information for how to use HTML iframe tag, please visit [W3Schools]
 If you wish to embed *room* called **ORGANIZATION-ROOMNAME** with *role* as a **PUBLISHER**, you can use following inline code in your *client*:
 
 ```html
-<iframe id="voolerGROUP" type="text/html" width="640" height="640" src="http://webaitio.tv/etusivu/OWNER-ROOMNAME?role=owner" frameborder="0"></iframe>
+<iframe id="voolerGROUP" width="640" height="640" src="https://baseurl.tld/OWNER-ROOMNAME?role=owner" frameborder="0"></iframe>
 ```
 
 You can notice that we added only one query string `?role=owner` to address line. With this single query string you defined upper role for user. When you are embedding voolerGROUP with simple iframe, voolerGROUP is taking care about all UI elements like predefined color scheme, logos etc. for organization.
@@ -73,39 +68,16 @@ You can also embed voolerGROUP backend if you wish as a similar way or You can u
 
 #### Advanced iframe embedding
 
-If you need more control for iframe embedding, you can use different parameters to tweak voolerGROUP for more customized usage. Following features are going to be described in API:
+If you need more control for iframe embedding, you can use different parameters to tweak voolerGROUP for more customized usage. You can use for example following features:
 
-- embed whitelabeled aka videos only
-- chat visible or hidded
-- define which UI elements are visible
-- list all public rooms by organization
-- list all recordings by organization
+- embed whitelabeled (remove header elements)
+- hide chat
 - possibility to have each publisher in own frame
 - possibility to have shared screen in own frame
+- define aspect ratio of videos (fixed 1:1, 16:9, 4:3 or flexible)
 - ...
 
-If you need some feature in your client application, just contact us and we will find out how we can help you.
-
-## Building JSON based client
-
-Our JSON API endpoints give external *clients* access to voolerGROUP data and outputs necessary data for your use.
-
-Current common base URL for JSON queries: **`https://webaitio.to/etusivu/`**+`ORGANIZATION-ROOMNAME`.
-
-Common base URL is going to change in Q1/2017, so define it as a variable.
-
-Few examples how to retrieve data in JSON format from voolerGROUP:
-
-|            |                               |                                               |                   |
-|:------     |:--------                      |-----                                          |-------            |
-|**METHOD**  |**ENDPOINT**                   |**USAGE**                                      |**RETURNS**        |
-|GET         |?data=json                     |Get full JSON                                  |full room data     |
-|GET         |?data=json&password={123}      |Get full JSON if *room* is password protected  |full room data     |
-|GET         |?data=json&password={WRONG}    |Password is wrong                              |*wrong password*-error   |
-
-Please note that if room is password protected and you don't give password as parameter, you will get necessary token for viewing role only (unless viewers role is disabled for room or for hole organization). If password is wrong, you will have error as return. If roomname is wrong, you will have 404 as return.
-
-We can offer whitelabeled iOS-application which can be branded as needed.
+We can offer whitelabeled iOS and Android applications which can be branded as needed.
 
 ## System requirements
 
@@ -145,14 +117,4 @@ VoolerGROUP is not currently supporting iOS without native application (except: 
 - Port 443 must be open on the client network
 - VoolerGROUP is based on VP8 video format (the WebRTC standard)
 - Internet Explorer or Edge **IS NOT** currently supported
-
-## Revision history
-
-##### February 5th, 2016
-Current and upcoming features added and modified
-
-##### January 31st, 2017
-First public release
-
-##### January 29th, 2017
-Initial version of voolerGROUP API
+##
