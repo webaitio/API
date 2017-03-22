@@ -68,7 +68,7 @@ You can also embed voolerGROUP backend if you wish as a similar way or You can u
 
 #### Advanced iframe embedding
 
-If you need more control for iframe embedding, you can use different parameters to tweak voolerGROUP for more customized usage. You can use for example following features:
+If you need more control for iframe embedding, you can use different parameters for more customized usage. You can use for example following features:
 
 - embed whitelabeled (remove header elements)
 - hide chat
@@ -78,6 +78,9 @@ If you need more control for iframe embedding, you can use different parameters 
 - ...
 
 We can offer whitelabeled iOS and Android applications which can be branded as needed.
+
+#### Examples
+
 
 ## System requirements
 
