@@ -1,5 +1,8 @@
 # VoolerGROUP API reference
-Last update March 22nd, 2017.
+![Build Status](https://img.shields.io/badge/Updated-March_22nd-blue.svg?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.3-blue.svg?style=flat-square)
+![B2B](https://img.shields.io/badge/B2B-White_Label_--ready-blue.svg?style=flat-square)
+
 
 This reference explains how to use the voolerGROUP API in your own applications and identifies the different types of events.
 
